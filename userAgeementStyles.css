@@ -1,0 +1,64 @@
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    color: #0056b3;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    background: #e9ecef;
+    margin: 5px 0;
+    padding: 10px;
+    border-left: 4px solid #0056b3;
+}
+
+p, address {
+    margin: 10px 0;
+}
+
+address {
+    font-style: normal;
+    line-height: 1.4;
+}
+
+address a {
+    color: #0056b3;
+    text-decoration: none;
+}
+
+address a:hover {
+    text-decoration: underline;
+}
+
+section h2 {
+    border-bottom: 2px solid #0056b3;
+    padding-bottom: 5px;
+}

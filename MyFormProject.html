@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <link rel="stylesheet" href="/formstyle.css">
+    <link rel="stylesheet" href="/MyTableStyles.css">
+    <link rel="stylesheet" href="/secondFormstyle.css">
+    <title>Form Submission</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h2>Input Form</h2>
+    <form id="userForm">
+        <h4 id="top">APPLICATION FORM</h4>
+        <div style="display: flex; justify-content: space-evenly;">
+         <div>
+             <label for="username">Name:</label><br>
+             <input class="enter" type="text" id="username">
+         </div>
+         <div>
+             <label for="E-mail">E-mail</label><br>
+             <input  class="enter" type="text" id="electronicmail">
+         </div>
+        </div>
+             <br/>
+         <div style="display: flex; justify-content: space-evenly;">
+             <div>    
+             <label for="course" >Course:</label><br>
+             <select id="choose" name="course">
+                 <option value="HTML">HTML</option>
+                 <option value="CSS">CSS</option>
+                 <option value="JavaScript">JavaScript</option>
+                 <option value="Python">Python</option>
+                 <option value="SQL">SQL</option>
+             </select>
+             </div>
+             <div>
+             <label for="level">Level:</label><br>
+             <select id="level" name="Level">
+                 <option value="Beginner">Beginner</option>
+                 <option value="Intermediate">Intermediate</option>
+                 <option value="Advanced">Advanced</option>
+                 <option value="Pro">Pro</option>
+                 <option value="Guru">Guru</option>
+             </select>
+         </div>
+         </div>
+             <br>
+         <div  style="display: flex; justify-content: space-evenly;">
+           <div>
+             <label for="location">Location:</label><br>
+ <select id="state" name="State">
+     <option value="Abia">Abia</option>
+     <option value="Adamawa">Adamawa</option>
+     <option value="Akwa-ibom">Akwa-ibom</option>
+     <option value="Anambra">Anambra</option>
+     <option value="Bauchi">Bauchi</option>
+     <option value="Bayelsa">Bayelsa</option>
+     <option value="Benue">Benue</option>
+     <option value="Borno">Borno</option>
+     <option value="Cross River">Cross River</option>
+     <option value="Delta">Delta</option>
+     <option value="Ebonyi">Ebonyi</option>
+     <option value="Edo">Edo</option>
+     <option value="Ekiti">Ekiti</option>
+     <option value="Enugu">Enugu</option>
+     <option value="Gombe">Gombe</option>
+     <option value="Imo">Imo</option>
+     <option value="Jigawa">Jigawa</option>
+     <option value="Kaduna">Kaduna</option>
+     <option value="Kano">Kano</option>
+     <option value="Katsina">Katsina</option>
+     <option value="Kebbi">Kebbi</option>
+     <option value="Kogi">Kogi</option>
+     <option value="Kwara">Kwara</option>
+     <option value="Lagos">Lagos</option>
+     <option value="Nassarawa">Nassarawa</option>
+     <option value="Niger">Niger</option>
+     <option value="Ogun">Ogun</option>
+     <option value="Ondo">Ondo</option>
+     <option value="Osun">Osun</option>
+     <option value="Oyo">Oyo</option>
+     <option value="Plateau">Plateau</option>
+     <option value="Rivers">Rivers</option>
+     <option value="Sokoto">Sokoto</option>
+     <option value="Taraba">Taraba</option>
+     <option value="Yobe">Yobe</option>
+     <option value="Zamfara">Zamfara</option>
+     <option value="Abuja">FCT</option>
+ </select><br><br>
+           </div>
+           <div>
+             <label for="Duration">Duration:</label><br>
+ <select id="pick" name="Interval">
+     <option value="1-3 months">1-3 months</option>
+     <option value="3-6 months">3-6 months</option>
+     <option value="6-9 months">6-9 months</option>
+     <option value="1 year">1 year</option>
+ </select>
+           </div>
+         </div>
+        <div style="text-align: center;">
+            <input type="button" value="Submit" onclick="submitForm()">
+        </div>
+    </form>
+    
+    <h2>Submitted Information</h2>
+    <table id="infoTable">
+        <thead>
+            <tr>
+                <th>S/N</th>
+                <th>Name</th>
+                <th>Email/Phone No.</th>
+                <th>Course</th>
+                <th>Level</th>
+                <th>Location</th>
+                <th>Duration</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+
+    <script>
+        let serialNumber = 1;
+
+        function getQueryParams() {
+            const params = {};
+            const queryString = window.location.search.substring(1);
+            const paramPairs = queryString.split('&');
+            for (const pair of paramPairs) {
+                const [key, value] = pair.split('=');
+                params[decodeURIComponent(key)] = decodeURIComponent(value);
+            }
+            return params;
+        }
+
+        function prefillForm() {
+            const params = getQueryParams();
+            if (params.name) {
+                document.getElementById('username').value = params.name;
+            }
+            if (params.email) {
+                document.getElementById('electronicmail').value = params.email;
+            }
+        }
+
+
+        function submitForm() {
+      
+            const username = document.getElementById('username').value;
+            const electronicmail = document.getElementById('electronicmail').value;
+            const choose = document.getElementById('choose').value;
+            const level = document.getElementById('level').value;
+            const state = document.getElementById('state').value;
+            const pick = document.getElementById('pick').value;
+            
+      
+            const table = document.getElementById('infoTable').getElementsByTagName('tbody')[0];
+            const newRow = table.insertRow();
+            
+  
+            const cell1 = newRow.insertCell(0);
+            const cell2 = newRow.insertCell(1);
+            const cell3 = newRow.insertCell(2);
+            const cell4 = newRow.insertCell(3);
+            const cell5 = newRow.insertCell(4);
+            const cell6 = newRow.insertCell(5);
+            const cell7 = newRow.insertCell(6);
+            const cell8 = newRow.insertCell(7);
+            const cell9 = newRow.insertCell(8);
+            
+            
+
+            cell1.innerHTML = serialNumber++;
+            cell2.innerHTML = username;
+            cell3.innerHTML = electronicmail;
+            cell4.innerHTML = choose;
+            cell5.innerHTML = level;
+            cell6.innerHTML = state;
+            cell7.innerHTML = pick;
+            cell8.innerHTML = '<button onclick="deleteRow(this)">Delete</button>';
+            
+            // document.getElementById('userForm').reset();
+        }
+
+        function deleteRow(button) {
+            const row = button.parentElement.parentElement;
+
+            row.remove();
+        }
+    </script>
+</body>
+</html>

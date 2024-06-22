@@ -1,0 +1,35 @@
+form {
+    text-align: center;
+    border: 4px solid grey;
+    width: 30%;
+    padding: 1%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    background-image: url(/MyEntireProject/projectimages/00537_nonharmfulsmokeii_2560x1600.jpg);
+    background-size: cover;
+    margin-top: 5%;
+
+}
+/* input {
+    border-radius: 7px;
+    height: 30px;
+    width: 80%;
+    border: 4px solid grey;
+} */
+
+.cont {
+    text-decoration: none;
+}
+
+button {
+    background-color: rgba(25, 75, 183, 0.396);
+}
+/* h4 { */
+
+/* } */
+.carry {
+    border-radius: 7px;
+    height: 30px;
+    width: 80%;
+}

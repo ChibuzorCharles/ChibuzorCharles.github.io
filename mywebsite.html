@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style=" background-color: rgb(184, 224, 241);">
+
+    <header>
+        <h1>Welcome to Your Website</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+<div>
+    <p id="about">Introduction to Website Development
+Website development involves creating and maintaining websites. It encompasses various technologies and skills, including HTML, CSS, JavaScript, SQL, PHP, and Python. Let's delve into each of these technologies and their roles in web development.
+    </p>
+</div>
+<h1> HTML (Hypertext Markup Language)</h1>
+HTML is the backbone of web development. It provides the structure and content of web pages. HTML uses tags to define elements such as headings, paragraphs, links, images, and more. Here's a basic HTML structure:
+
+html
+<pre style="background-color: grey; margin-left: 20px; width: 50%; border-radius: 7px; padding: 7px;">
+    &lt!DOCTYPE html>
+        &lthtml lang="en"&gt
+        &lthead&gt
+            &ltmeta charset="UTF-8"&gt
+            &ltmeta name="viewport" content="width=device-width, initial-scale=1.0"&gt
+            &lttitle&gtYour Website Title&lt/title&gt
+        &lt/head&gt
+        &ltbody&gt
+            &ltheader&gt
+                &lth1&gtWelcome to Your Website&lt/h1&gt
+            &lt/header&gt
+            &ltnav&gt
+                &ltul&gt
+                    li&gt&lta href="#home"&gtHome&lt/a&gt&lt/li&gt
+                    &ltli&gt&lta href="#about"&gtAbout&lt/a&gt&lt/li&gt
+                    &ltli&gt&lta href="#contact">Contact&lt/a&gt&lt/li&gt
+                &lt/ul&gt
+            &lt/nav&gt
+            &ltsection id="home"&gt
+                &lth2&gtHome&lt/h2&gt
+                &ltp&gtThis is the home page of your website.&lt/p&gt
+            &lt/section&gt
+            &ltsection id="about"&gt
+                &lth2&gtAbout&lt/h2&gt
+                &ltp&gtLearn about our company and team.&lt/p&gt
+            &lt/section&gt
+            &ltsection id="contact"&gt
+                &lth2&gtContact&lt/h2&gt
+                &ltp&gtGet in touch with us.&lt/p&gt
+            &lt/section&gt
+        &lt/body&gt
+        &lt/html&gt
+</pre>
+
+<h1>2. CSS (Cascading Style Sheets)</h1>
+CSS is used to style and format HTML elements. It allows you to control the layout, colors, fonts, and other visual aspects of your website. Here's an example of CSS:
+
+css
+<pre style="background-color: grey;  margin-left: 20px; width: 50%; border-radius: 7px; padding: 7px;">
+/* Style the header */
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Style navigation links */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Style sections */
+section {
+    padding: 20px;
+    margin: 20px 0;
+    background-color: #f4f4f4;
+}
+</pre>
+<h1>3. JavaScript</h1>
+<p>
+JavaScript adds interactivity and dynamic behavior to websites. It can be used to manipulate HTML and CSS, handle user interactions, validate forms, create animations, and more. Here's a simple JavaScript example:</p>
+
+javascript
+<pre style="background-color: grey;  margin-left: 20px; width: 50%; border-radius: 7px; padding: 7px;">
+// Function to change background color
+function changeColor() {
+    document.body.style.backgroundColor = "lightblue";
+}
+
+// Event listener to call the function on button click
+document.getElementById("changeColorButton").addEventListener("click", changeColor);
+</pre>
+<h1>4. SQL (Structured Query Language)</h1>
+<p>
+SQL is a language used for managing and manipulating databases. It allows you to create, retrieve, update, and delete data in relational databases. Here's an example of SQL:
+</p>
+sql
+<pre style="background-color: grey;  margin-left: 20px; width: 50%; border-radius: 7px; padding: 7px;">
+-- Create a table
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL,
+    email VARCHAR(100) NOT NULL
+);
+
+-- Insert data into the table
+INSERT INTO users (username, email) VALUES ('john_doe', 'john@example.com');
+
+-- Retrieve data from the table
+SELECT * FROM users;
+</pre>
+<h1>5. PHP (Hypertext Preprocessor)</h1>
+<p>
+PHP is a server-side scripting language used for creating dynamic web pages and web applications. It can interact with databases, handle form data, generate dynamic content, and more. Here's a simple PHP example:</p>
+
+php
+<pre style="background-color: grey;  margin-left: 20px; width: 50%; border-radius: 7px; padding: 7px;">
+&lt?php
+// Define variables
+$name = "John";
+$age = 30;
+
+// Output dynamic content
+echo "Hello, my name is $name and I am $age years old.";
+?>
+</pre>
+<h1>6. Python</h1>
+<p>
+Python is a versatile programming language used in various fields, including web development. It can be used for server-side scripting, web scraping, data analysis, and more. Here's a basic Python example for a web application using Flask:
+</p>
+
+python
+<pre style="background-color: grey;  margin-left: 20px; width: 50%; border-radius: 7px; padding: 7px;">
+from flask import Flask
+
+# Create a Flask app
+app = Flask(__name__)
+
+# Define a route
+@app.route('/')
+def index():
+    return 'Hello, World!'
+
+# Run the app
+if __name__ == '__main__':
+    app.run(debug=True)
+</pre>
+<b>Conclusion</b>
+<p id="contact">Website development is a vast field that requires knowledge of multiple technologies. HTML, CSS, JavaScript, SQL, PHP, and Python are essential tools for creating dynamic and interactive websites. By mastering these technologies, you can build powerful web applications and contribute to the ever-evolving world of the internet.
+</p>
+<p>
+This overview provides a solid foundation for understanding website development and the key technologies involved. Feel free to explore each technology further to gain a deeper understanding and enhance your skills in web development.
+</p>
+<div style="display: flex; justify-content: space-between;">
+    <div>
+<b>Continue to <a href="/MyEntireProject/My_Exercises_5.html" style="text-decoration: none; color: blue;">Sign Up page</a></b></div>
+<div><a href="#about" style="text-decoration: none; color: red;">Back to top</a></div>
+</div>
+<script>
+   
+    document.addEventListener('DOMContentLoaded', function() {
+    var urlParams = new URLSearchParams(window.location.search);
+    var query = urlParams.get('q');
+
+    // Highlight the searched word in the search results
+    var searchResults = document.querySelectorAll('.search-result');
+    searchResults.forEach(function(result) {
+        var content = result.textContent;
+        var highlightedContent = content.replace(new RegExp(query, 'gi'), function(match) {
+            return '<span class="highlight">' + match + '</span>';
+        });
+        result.innerHTML = highlightedContent;
+    });
+});
+
+</script>
+
+</body>
+</html>
+
+
+

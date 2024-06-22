@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+     table,
+        tr,
+        th,
+        td {
+          border: 2px solid #cccccc;
+          border-collapse: collapse;
+          border-color: black;
+          background-color: grey;
+        }
+
+        td {
+            padding-left: 10px;
+        }
+</style>
+<body>
+   <table style="width: 80%;">
+     <caption>Students Information</caption>
+     <thead>
+        <tr>
+            <th>S/N</th>
+            <th>Name</th>
+            <th>Email/Phone No.</th>
+            <th>Course</th>
+            <th>Level</th>
+            <th>Location</th>
+            <th>Duration</th>
+        </tr>
+     </thead>
+     <tbody id="table-body">
+        
+     </tbody>
+   </table> 
+</body>
+<!-- <script>
+    window.addEventListener('DOMContentLoaded',()=>{
+      const users = JSON.parse(localStorage.getItem('users')) || [];
+      const table = document.createElement('table');
+      const headerRow = document.createElement('tr');
+      headerRow.innerHTML = `
+            <th>S/N</th>
+            <th>Name</th>
+            <th>Email/Phone No.</th>
+            <th>Course</th>
+            <th>Level</th>
+            <th>Location</th>
+            <th>Duration</th>
+      `;
+      table.appendChild(headerRow);
+
+      users.forEach((user, index) => {
+        const row = document.getElementById('tr');
+        row.innerHTML = `
+        <td>${index + 1}S/N</td>
+            <td>${user.name}Name</td>
+            <td>${user.email}Email/Phone No.</td>
+            <td>${user.course}Course</td>
+            <td>${user.level}Level</td>
+            <td>${user.location}Location</td>
+            <td>${user.duration}Duration</td>
+            `;
+            table.appendChild(row);
+      })
+      document.body.appendChild(table);
+    })
+ </script>  -->
+</html>

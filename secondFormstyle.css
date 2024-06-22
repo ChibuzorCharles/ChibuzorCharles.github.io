@@ -1,0 +1,79 @@
+.first {
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    padding-inline: 50px;
+    /* padding: auto; */
+    background-color: navy;
+}
+body {
+margin: auto;
+}
+#btc {
+width:70%;
+height: 20px;
+margin-top: 4px;
+text-align: center;
+border-radius: 7px;
+border: 0.2px solid #ccc;
+}
+#top {
+background-color: #ccc;
+background-size: contain;
+padding-top: 2%;
+width: 90%; 
+height: 50px;
+text-align: center;
+border-radius:4px;
+margin-left: auto;
+margin-right: auto;
+margin-top: 3px;
+/* opacity: 0.3; */
+border: 2px solid;
+font-size: 20px;
+color: white;
+}
+
+#choose {
+width: 20vw;
+height: 30px;
+border-radius: 6px;
+border: 1px solid;
+box-shadow: 1.5px 1.5px;
+
+}
+#level {
+width: 20vw;
+height: 30px;
+border-radius: 6px;
+border: 1px solid;
+box-shadow: 1.5px 1.5px;
+}
+.enter {
+width: 20vw;
+height: 20px;
+border-radius: 6px;
+border: 1px solid;
+box-shadow: 1.5px 1.5px;
+}
+#pick {
+width: 20vw;
+height: 30px;
+border-radius: 6px;
+border: 1px solid;
+box-shadow: 1.5px 1.5px;
+}
+#state {
+width: 20vw;
+height: 30px;
+border-radius: 6px;
+border: 1px solid;
+box-shadow: 1.5px 1.5px;
+}
+.keep {
+width: 10vw;
+height: 20px;
+margin-bottom: 10px;background-color: transparent;
+border-radius: 6px;
+border: 1px solid;
+} /* */

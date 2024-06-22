@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/MyEntireProject/signupStyle.css">
+    <link rel="stylesheet" href="/MyEntireProject/fontawesome-free-6.5.1-web/css/all.css">
+    <link rel="stylesheet" href="/MyEntireProject/dropdown.css">
+    <link rel="stylesheet" href="/styles.css">
+    
+    <title>Document</title>
+
+</head>
+<style>
+   .first {
+        display: flex;
+        justify-content: space-between;
+        align-self: center;
+        padding-inline: 50px;
+        background-color: navy;
+   }
+   #logos {
+            color: white;
+            justify-content: space-between;
+   }
+   .second {
+        background-color: black;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-inline: 50px;
+        height: 50px;
+        
+        
+   }
+   .third {
+        width: 30%;
+        padding-inline: 30px;
+        margin: 20px;
+   }
+   #navigation {
+        display: flex;
+        justify-content: space-between;
+        align-self: center;
+   }
+   #search {
+        height: 2vw;
+        border-radius: 20px;
+        justify-content: center;
+   }
+   /* #courses {
+    background-color: transparent;
+    padding-inline: 15px;
+    text-decoration: none;
+    color: rgb(230, 230, 242);
+    border: 1px thin white; 
+   }*/
+   form {
+    width: 35vw;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border: 5px solid white;
+    box-shadow: 3px 3px;
+    background-color: transparent;
+    text-align: center;
+    margin-top: 10px;
+    height: fit-content;
+   }
+
+   .carry {
+    width: 30vw;
+   height: 30px;
+   background-color: white;
+   border-radius: 6px;
+   border: 1px solid;
+   flex-wrap: nowrap;
+   }
+</style>
+<body>
+   <div style="width: 100%; height: 100vh;">
+    <div class="back" style="background-image: url(/MyEntireProject/projectimages/Bokeh\ and\ Shine\ Texture\ By\ tuts\ pk\ \(6\).jpg); background-size: cover;">
+        <div style="display: flex;" class="first">
+            <p id="head"> <b style="font-size: 2vw; color: white; cursor: pointer;">MyLogo</b></p>
+            <p>
+                <i style="padding-right: 1.5vw;"  id="logos" class="fa-solid fa-location-dot"></i>
+                <i style="padding-right: 1.5vw;"  id="logos" class="fa-solid fa-phone"></i>
+                <i style="padding-right: 1.5vw;" id="logos" class="fa-solid fa-calendar-days"></i>
+            </p>
+        </div>
+        <div class="second" style="display: flex; justify-content: space-between; color: white;" >
+            <div>
+                <a href="https://www.html.com" id="courses">HTML</a>
+                <a href="https://www.css.com" id="courses">CSS</a>
+                <a href="https://www.javascript.com" id="courses">JAVASCRIPT</a>
+                <a href="https://www.python.com" id="courses">PYTHON</a>
+                <a href="https://www.sql.com" id="courses">SQL</a>
+                <a href="https://www.w3schools.com" style="color: skyblue;" id="courses">More</a>
+            </div>
+            <div class="search-container">
+                <input class="search-input" type="text" name="search" id="searchInput" placeholder="Search" ><button id="searchButton" class="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+        </div>
+        <div class="flex">
+        <div class="third"><p style="color: white; "><b style="font-size: 2rem; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">BUILD THE WEB WITH US!</b> Learn website development from scratch with our comprehensive course. From HTML to responsive designs, our expert instructors will guide yoyu every step of the way. Join our <b style="font-size: 1.6rem;">Community</b> and start building your drem website<b style="font-size: 1.8rem;">TODAY!</b></p>
+            <p style="background: rgba(193, 121, 44, 0.661); border-radius: 0px 7px 7px 0px; border-left: 4px solid white; padding: 3px; font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 1.2vw;">Click <a href="/mywebsite.html" style="color: yellow; text-decoration: none;">Here</a> to visit our website and learn more about Website Development</p>
+            </div>
+        <div>
+            <form id="signupForm" onsubmit="validateAndRedirect(event)">
+                <h4><b style="color: white; cursor: pointer;" class="up">Log In</b></h4>
+                    <!-- <input id="username" class="carry" type="text" placeholder="User Name" autocomplete="on"> -->
+                   
+                    <input id="electronicmail" class="carry" type="email"  placeholder="E-mail"/>
+                    <br/>
+                    <br/>
+                    <input id="originalpassword" class="carry" type="password" placeholder="Password">
+          
+                    <br><br>
+                    
+                        <input id="confirmoriginalpassword" class="carry" type="password" placeholder="Confirm Password"/><br>
+                       <div style="display: flex; justify-content: space-evenly;">
+                        <div>
+                             <b style="color: white;"><b style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 1vw;">Forgotten Password?</b> 
+                        </div>
+                        <div>
+                            <b style="color: white; font-family: Verdana, Geneva, Tahoma, sans-serif;font-size: 1vw;">Show Password</b><input type="checkbox" onclick="myFunction()">
+                        </div>
+                    </div>
+                    
+                   
+                    <br>
+                     <div style="display: flex; justify-content: space-evenly;">
+                      <div>
+                        <button   id="signup"  type="button" style="background-color: navy; padding: 5px; color: white; border-radius: 5px;border: 2px solid black; cursor: pointer;">Sign Up</button>
+                    </div>
+                    <div>
+                        <button style="background-color: skyblue; padding: 5px; border-radius: 5px; border: 2px solid black; cursor: pointer;">Login</button>
+                    </div>
+              </div>
+              <hr>
+              <div style="background-color: transparent; font-size: 0.8vw; margin-left: 8px; margin-right: 8px; font-family: Verdana, Geneva, Tahoma, sans-serif; border: 0.7px solid black; border-radius: 6px; padding: 2px;">By signing in, you are confirming that you have read and agreed to the <a href="/MyEntireProject/userAgreement.html" style="text-decoration: none; color:rgb(17, 188, 222)
+              ;">User Agreement</a> and <a href="/MyEntireProject/privacyPolicy.html" style="color: rgb(17, 188, 222); text-decoration: none;">Privacy Policy</a>.</div>
+              <br>
+                </form>
+            </div>
+            
+    </div>
+   </div>
+   <script src="script.js"></script>
+   <script>
+
+function myFunction() {
+            var x = document.getElementById("originalpassword");
+            var y = document.getElementById("confirmoriginalpassword");
+            if (x.type === "password") {
+                x.type = "text";
+                y.type = "text"
+            } else {
+                x.type = "password";
+                y.type = "password"
+            }
+        }
+
+    const signupForm = document.getElementById('signupForm');
+    var modal = document.getElementById("termsModal");
+    var agreeBtn = document.getElementById("agreeBtn"); 
+    var btn = document.getElementById("loginBtn");
+    var span = document.getElementsByClassName("close")[0];
+
+
+    signupForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+        console.log('Form submission intercepted')
+
+        // const name = document.getElementById('username').value;
+        const email = document.getElementById('electronicmail').value;
+        const password = document.getElementById('originalpassword').value;
+        const confirmPassword = document.getElementById('confirmoriginalpassword').value;
+
+        
+        if (!email||!password||!confirmPassword) {
+
+            alert('Please make sure you fill in the required fields.');
+            return;
+            console.log('Validation failed: Missing fields')
+        }
+
+        if (password!==confirmPassword) {
+            alert('Sorry, but your passwords do not match');
+            return;
+            console.log('Validatin failed: Passwords do not match')
+        }
+
+        console.log('Validation passed: Redirecting')
+
+        window.location.href='MyExercises_6.html'
+    })
+    
+    
+    document.addEventListener('DOMContentLoaded', () => {
+            const savedFormData = localStorage.getItem('formData');
+            if (savedFormData) {
+                const formData = JSON.parse(savedFormData);
+                // document.getElementById('username').value = formData.name || '';
+                document.getElementById('electronicmail').value = formData.email || '';
+            }
+        });
+
+        console.log('DOM fully loaded and parsed')
+
+        document.getElementById('signupForm')
+        document.addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            // const name = document.getElementById('username').value;
+            const email = document.getElementById('electronicmail').value;
+
+            const formData = {email };
+            localStorage.setItem('formData', JSON.stringify(formData));
+
+            let users = JSON.parse(localStorage.getItem('users')) || [];
+            users.push(formData);
+            localStorage.setItem('users', JSON.stringify(users));
+
+            // window.location.href=`MyExercises_6.html?name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}`;
+            
+            // window.location.href='MyFormProject.html'
+        });
+
+        document.getElementById('signup').onclick = function() {
+            window.location.href = "signUpInterface.html"
+        }
+
+        document.getElementById('searchButton').onclick = function() {
+    var query = document.getElementById('searchInput').value;
+    console.log('Searching for:', query);
+    window.location.href = 'mywebsite.html' + encodeURIComponent(query);
+
+};
+
+document.getElementById('searchInput').addEventListener('keypress', function(event) {
+    if (event.key === 'Enter') {
+        document.getElementById('searchButton').click();
+    }
+    // window.location.href = 'mywebsite.html' + encodeURIComponent(query);
+});
+
+window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+        const dropdowns = document.querySelectorAll('.dropdown');
+        dropdowns.forEach((dropdown) => {
+            if (dropdown.classList.contains('active')) {
+                dropdown.classList.remove('active');
+            }
+        });
+    }
+}
+
+
+
+   </script>
+</body>
+</html>
